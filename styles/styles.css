@@ -226,13 +226,23 @@ main {
   color: var(--fg);
 }
 
-.center > p {
+.center p {
   color: var(--fg);
   font-size: 1.35rem;
-  line-height: 2rem;
+  line-height: rem;
   padding: 1rem;
   margin: 0 auto;
   font-family: george;
+}
+
+aside.right p {
+  font-size: 1.35rem;
+  line-height: 2rem;
+  color: var(--pink);
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: cyborg;
+  font-weight: 100;
 }
 
 .flex {
@@ -247,7 +257,7 @@ aside.left {
   color: var(--blue);
 }
 
-aside.left > p {
+aside.left p {
   font-size: 1.35rem;
   line-height: 2rem;
   color: var(--blue);
@@ -258,6 +268,10 @@ aside.left > p {
 }
 
 aside.left code {
+  font-family: eth;
+}
+
+.center code {
   font-family: eth;
 }
 
@@ -283,7 +297,7 @@ aside.right {
   color: var(--fg);
   margin: 0 auto;
   font-family: george;
-  line-height: 2rem;
+  line-height: 2.25rem;
   font-weight: 100;
 }
 
