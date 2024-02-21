@@ -1,3 +1,93 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
 @font-face {
   font-family: "notes";
   src: url("../assets/fonts/cute_notes/Cute\ Notes.ttf");
@@ -86,10 +176,13 @@ body {
 }
 
 .header > h1 {
-  font-family: neurock;
+  font-family: roblox;
+  letter-spacing: 1.25px;
   text-align: center;
   color: var(--purple);
   font-size: 2.5rem;
+  margin: 0 auto;
+  padding: 1.5rem;
 }
 
 .snow {
@@ -131,11 +224,14 @@ main {
   border: 0.25rem solid var(--fg); /* 2px width solid black border */
   margin-left: auto;
   color: var(--fg);
-  padding: 1rem;
 }
 
 .center > p {
-  font-size: 1.25rem;
+  color: var(--fg);
+  font-size: 1.35rem;
+  line-height: 2rem;
+  padding: 1rem;
+  margin: 0 auto;
   font-family: george;
 }
 
@@ -151,10 +247,52 @@ aside.left {
   color: var(--blue);
 }
 
+aside.left > p {
+  font-size: 1.35rem;
+  line-height: 2rem;
+  color: var(--blue);
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: cyborg;
+  font-weight: 100;
+}
+
+aside.left code {
+  font-family: eth;
+}
+
+aside.left li {
+  font-size: 1.35rem;
+  color: var(--blue);
+  margin: 0 auto;
+  font-family: george;
+  line-height: 2rem;
+  font-weight: 100;
+}
+
 aside.right {
   border: 0.25rem solid var(--pink); /* 2px width solid black border */
   flex-grow: 1;
   margin-left: 1rem;
   color: var(--pink);
   width: 25rem;
+}
+
+.center li {
+  font-size: 1.35rem;
+  color: var(--fg);
+  margin: 0 auto;
+  font-family: george;
+  line-height: 2rem;
+  font-weight: 100;
+}
+
+a {
+  color: var(--yellow) !important;
+  transition: 0.3s !important;
+}
+
+a:hover {
+  color: var(--red2) !important;
+  cursor: crosshair !important;
 }
