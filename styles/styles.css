@@ -175,7 +175,7 @@ body {
   border-radius: 1rem 0 1rem 0; /* top left and bottom right corners rounded */
 }
 
-.header h1 {
+h1 {
   font-family: roblox;
   letter-spacing: 1.25px;
   text-align: center;
@@ -261,6 +261,17 @@ aside.right p {
 
 .flex {
   display: flex;
+}
+
+.flexb {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 1rem;
+}
+.a {
+  border-color: var(--salmon);
+  color: var(--salmon);
+  font-family: dune;
 }
 
 aside.left {
